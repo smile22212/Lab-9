@@ -1,7 +1,7 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* existing config options */
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -29,6 +29,12 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+
+  /* NEW: enable static export for GitHub Pages */
+  output: 'export',
+  experimental: {
+    appDir: false, // optional: disable App Router if you use Pages Router
   },
 };
 
